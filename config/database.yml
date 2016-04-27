@@ -42,7 +42,7 @@ development:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  adapter: postgresql
-  pool: 5
-  database: demo_production
+# production:
+#   adapter: postgresql
+#   pool: 5
+#   database: demo_production

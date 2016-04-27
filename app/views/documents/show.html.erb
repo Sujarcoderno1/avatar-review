@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<div class='col-md-1'>
+  <%= @document.name %>
+  <div class='row'>
+    <div class='doc-img col-md-12'>
+      <%= image_tag('/assets/document.jpg') %>
+    </div>
+  </div>
+
+  <div class='row'>
+    <div class='doc-option col-md-12'>
+      <%= link_to 'Edit', edit_document_path(@document) %> |
+      <%= link_to 'Back', documents_path %>
+    </div>
+  </div>
+</div>

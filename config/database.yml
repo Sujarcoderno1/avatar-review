@@ -43,6 +43,7 @@ development:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 # production:
-#   adapter: postgresql
-#   pool: 5
+#   <<: *default
 #   database: demo_production
+#   username: demo
+#   password: <%= ENV['DEMO_DATABASE_PASSWORD'] %>

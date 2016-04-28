@@ -5,6 +5,6 @@ module ApplicationHelper
   end
 
   def get_download_link document
-    document.attachment.url+'?dl=1' unless document.attachment.url.nil?
+    document.attachment.url+'?dl=1' unless document.attachment.try(:url).nil?
   end
 end

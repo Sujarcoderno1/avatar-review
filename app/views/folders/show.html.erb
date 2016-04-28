@@ -12,12 +12,13 @@
         <div class='text-center'>
           <%= document.name.truncate(10) %>
         </div>
-        <div class='row'>
-          <div class='doc-img col-md-12'>
-            <%= image_tag('/assets/document.jpg') %>
-          </div>
+        <div class='doc-img'>
+          <% if image_file_type? document.attachment %>
+            <img src="<%= document.attachment.url %>" data-id="<%= document.id %>"/>
+          <% else %>
+            <img src="/assets/document.jpg" data-id="<%= document.id %>"/>
+          <% end %>
         </div>
-
         <div class='row'>
           <div class='col-md-12 text-center'>
             <%= link_to 'Edit', edit_document_path(document) %> |

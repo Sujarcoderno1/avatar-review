@@ -3,18 +3,8 @@ class DocumentsController < ApplicationController
 
   def create
     @folder = current_user.folders.find(params[:folder_id]) if params[:folder_id].present?
-    
-    @document = if @folder.present?
-      @folder.documents.new(document_params)
-    else
-      current_user.documents.new(document_params)
-    end
-
-    path = if @folder.present?
-      folder_path(@folder)
-    else
-      folders_path
-    end
+    @document = (@folder.present? ? @folder.documents : current_user.documents).new(document_params)
+    path = @folder.present? ? folder_path(@folder) : folders_path
 
     respond_to do |format|
       if @document.save

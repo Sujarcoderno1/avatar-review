@@ -35,6 +35,23 @@ class DocumentsController < ApplicationController
     end
   end
 
+  def download
+    url = Document.find(params[:id]).attachment.try(:url)
+
+    destination_file_full_path = Rails.root.to_s + "/" + url.to_s.split("/").last
+    begin
+      open(destination_file_full_path, 'wb') do |file|
+        file << open(url).read
+      end
+    rescue
+      puts "Exception occured while downloading..."
+    end
+    redirect_to :back
+    # destination_file_full_path
+    # @dbsession = DropboxSession.new(Rails.application.secrets[:dropbox]['app_key'], Rails.application.secrets[:dropbox]['app_secret'])
+    # redirect_to DropboxClient.new(@dbsession, Rails.application.secrets[:dropbox]['mode']).shares(url)
+  end
+
   def edit
   end
 

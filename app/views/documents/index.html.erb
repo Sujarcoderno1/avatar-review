@@ -18,6 +18,7 @@
       <div class='text-center'>
         <%= link_to fa_icon('edit'), edit_document_path(document) %> |
         <%= link_to fa_icon('trash'), document, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to fa_icon('download'), document.attachment.path, title: 'Download' %>
       </div>
   </div>
 <% end %>

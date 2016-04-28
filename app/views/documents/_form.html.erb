@@ -19,11 +19,13 @@
     </div>
   </div>
   <br>
-  <div class='row'>
-    <div class='col-md-6'>
-      <%= f.file_field :attachment, placeholder: 'Attachment file' %>
+  <% unless @document.attachment.try(:path).present? %>
+    <div class='row'>
+      <div class='col-md-6'>
+        <%= f.file_field :attachment, placeholder: 'Attachment file' %>
+      </div>
     </div>
-  </div>
+  <% end %>
   <br>
   <br>
   <div class='col-md-12 actions'>

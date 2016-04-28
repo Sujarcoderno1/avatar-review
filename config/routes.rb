@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  resources :documents
+  resources :documents do
+    member do
+      post :download
+    end
+  end
   resources :folders
 
   post 'folders/update_document_folder' => 'folders#update_document_folder', as: :update_document_folder

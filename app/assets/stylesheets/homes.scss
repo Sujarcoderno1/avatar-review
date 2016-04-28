@@ -33,3 +33,9 @@ Follow me on Twitter @maridlcrmn
     .navbar .nav-collapse .navbar-form { margin: 0; }
     .nav-collapse>li { float: none; }
 }
+
+.back-btn { 
+  position: relative;
+  z-index: 2;
+  margin: 15px;
+}

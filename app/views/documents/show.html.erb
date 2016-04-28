@@ -4,14 +4,11 @@
   <%= @document.name %>
   <div class='row'>
     <div class='doc-img col-md-12'>
-      <%= image_tag('/assets/document.jpg') %>
-    </div>
-  </div>
-
-  <div class='row'>
-    <div class='doc-option col-md-12'>
-      <%= link_to 'Edit', edit_document_path(@document) %> |
-      <%= link_to 'Back', documents_path %>
+      <% if image_file_type? document.attachment %>
+        <img src="<%= document.attachment.url %>" data-id="<%= document.id %>"/>
+      <% else %>
+        <img src="/assets/document.jpg" data-id="<%= document.id %>"/>
+      <% end %>
     </div>
   </div>
 </div>

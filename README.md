@@ -1,4 +1,4 @@
-# MyFyx Homework #
+# MyFyx Avatar Review #
 
 As part of our application process, we'd like to see what you can produce by giving you a small assignment. It should only take a few hours to complete, though any extra work that you put in will be noticed and taken into consideration.
 

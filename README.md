@@ -12,7 +12,7 @@ Required features:
 - User can select an uploaded image to be their "avatar"
 - User can view their uploaded images and their avatar, even after refreshing the page
 				  
-You can use any technology or framework for this project, though we prefer a [React.js](https://facebook.github.io/react/) frontend and a Node.js, Golang, or Ruby on Rails backend, as these are technologies that we use. Your frontend should use at least some Javascript, i.e. you should not just rely on server rendered static HTML and <input /> elements.  Assume the code you are writing would be going into production - make it clean, modular, and add comments where appropriate.
+You can use any technology or framework for this project, though we strongly prefer a [React.js](https://facebook.github.io/react/) frontend and a Node.js, Golang, or Ruby on Rails backend, as these are technologies that we use. Your frontend should use at least some Javascript, i.e. you should not just rely on server rendered static HTML and <input /> elements.  Assume the code you are writing would be going into production - make it clean, modular, and add comments where appropriate.
 
 Some optional, extra credit features:
 

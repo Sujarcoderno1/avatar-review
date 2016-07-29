@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   resources :documents
   resources :folders
+  resources :photos
 
   post 'folders/update_document_folder' => 'folders#update_document_folder', as: :update_document_folder
 

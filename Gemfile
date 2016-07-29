@@ -41,6 +41,10 @@ gem 'jquery-ui-rails'
 gem "font-awesome-rails"
 # gem "dropbox-api"
 gem 'carrierwave-dropbox'
+gem 'carrierwave-base64'
+gem 'responders'
+gem 'rack-cors', :require => 'rack/cors'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
